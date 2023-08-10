@@ -3,17 +3,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 public class Main {
-
-// The task is to use the Base base class and to use the WebDriver object to search for "Active sync" using Selenium in Google.
+    // search for "Active sync" using Selenium in Google.
 // Then the first link should be clicked.
-
     public static void main(String args[]) throws InterruptedException {
         Base.getDriver();
         WebDriver driver = new ChromeDriver();
@@ -28,10 +23,10 @@ public class Main {
         search.sendKeys("Active sync");
         Thread.sleep(1000);
         // finding suggestion list
-        List<WebElement> suggestion_list= driver.findElements(By.xpath("//cr-realbox-match/[@role='option']/descendant::div[@id='contents']"));
+        List<WebElement> suggestion_list = driver.findElements(By.xpath("//cr-realbox-match/[@role='option']/descendant::div[@id='contents']"));
         System.out.println(suggestion_list.size());
         Thread.sleep(1000);
-        for(WebElement suggestion_name: suggestion_list){
+        for (WebElement suggestion_name : suggestion_list) {
             String suggestion_value = suggestion_name.getText();
             System.out.println(suggestion_value);
             // selecting the link "Active sync"
