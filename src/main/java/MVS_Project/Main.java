@@ -3,12 +3,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-public class Main {
-    // search for "Active sync" using Selenium in Google.
+
+// search for "Active sync" using Selenium in Google.
 // Then the first link should be clicked.
+
+public class Main {
+
     public static void main(String args[]) throws InterruptedException {
         Base.getDriver();
         WebDriver driver = new ChromeDriver();
