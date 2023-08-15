@@ -25,16 +25,9 @@ public class Main {
         search.sendKeys("Active sync");
         Thread.sleep(1000);
         // finding suggestion list
-        List<WebElement> suggestion_list = driver.findElements(By.xpath("//cr-realbox-match/[@role='option']/descendant::div[@id='contents']"));
-        System.out.println(suggestion_list.size());
-        Thread.sleep(1000);
-        for (WebElement suggestion_name : suggestion_list) {
-            String suggestion_value = suggestion_name.getText();
-            System.out.println(suggestion_value);
-            // selecting the link "Active sync"
-            if (suggestion_value.equalsIgnoreCase("Active sync")) {
-                suggestion_name.click();
-            }
-        }
+        List<WebElement> suggestion_list = driver.findElements(By.xpath("//ul[@role='listbox']/li"));
+        System.out.println("Size of the suggestion list: " + suggestion_list.size());
+        // clicking the first link from the suggestions list
+        suggestion_list.get(0).click();
     }
 }
