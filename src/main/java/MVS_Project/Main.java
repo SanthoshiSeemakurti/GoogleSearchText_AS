@@ -3,6 +3,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -15,7 +17,7 @@ public class Main {
         Base.getDriver();
         WebDriver driver = new ChromeDriver();
         //implicit wait
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         //URL launch
         driver.get("https://www.google.com/");
         WebElement rejectAll = driver.findElement(By.id("W0wltc"));
