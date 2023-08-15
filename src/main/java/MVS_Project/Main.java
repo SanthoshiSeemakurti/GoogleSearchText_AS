@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 // search for "Active sync" using Selenium in Google.
 // Then the first link should be clicked.
